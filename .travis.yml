@@ -3,7 +3,7 @@ language: php
 
 # list any PHP version you want to test against
 env:
-  - DB=mysql
+  - DB=pgsql
 php:
   # using major version aliases
 
@@ -16,6 +16,7 @@ php:
 matrix:
   exclude:
     - php: hhvm
+      env: DB=pgsql
 
   allow_failures:
     - php: 7.0
